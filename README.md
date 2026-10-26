@@ -15,7 +15,8 @@ A GEMM benchmark suite built around a simple principle: validate correctness bef
 - **Implemented:** configurable cache-blocked C++20 GEMM, a reference implementation, deterministic inputs, and CSV benchmark output.
 - **Reproducibility:** build and smoke-test automation with GitHub Actions, a Dockerfile, and a Slurm batch script.
 - **Performance methodology:** document workload, hardware, compiler settings, repetitions, and validation status alongside reported measurements.
-- **Next milestones:** publish baseline measurements, evaluate OpenMP scaling, and extend the same workload to CUDA and MPI.
+- **First experiment:** [local CPU baseline study](https://github.com/maheshnannepaga/hpc-perf-lab/blob/main/docs/cpu-baseline.md) with 45 verified serial samples, environment metadata, and reproducible learning exercises.
+- **Next milestones:** evaluate OpenMP scaling and extend the same workload to CUDA and MPI.
 
 [Explore the code](https://github.com/maheshnannepaga/hpc-perf-lab) · [Benchmark methodology](https://github.com/maheshnannepaga/hpc-perf-lab/blob/main/docs/experiment-plan.md)
 
@@ -30,7 +31,7 @@ A GEMM benchmark suite built around a simple principle: validate correctness bef
 
 ## What I'm working toward
 
-- Measure CPU baseline performance across matrix and tile sizes.
+- Extend the first local CPU baseline with fuller hardware identification and controlled comparisons.
 - Compare serial and OpenMP implementations with documented hardware and thread counts.
 - Implement CUDA GEMM and compare a basic kernel with shared-memory tiling.
 - Report GPU kernel time separately from end-to-end time, including data transfers.
